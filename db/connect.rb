@@ -1,4 +1,3 @@
-
 class Connection
     WILD = true
     def initialize()
