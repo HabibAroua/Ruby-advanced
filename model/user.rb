@@ -44,12 +44,36 @@ class User
     end
     
     def show
-        
+        c=Connection.new()
+        con=nil
+        con=c.getConnection()
+        select=con.query("select * from user")
+        arr = Array.new
+        select.each_hash do |data|
+            u=User.new(data['id'],data['name'],data['password'])
+            arr << u
+        end
+        return arr
     end
+    
+    def countUser
+         c=Connection.new()
+        con=nil
+        con=c.getConnection()
+        select=con.query("select * from user")
+        i=0
+        select.each_hash do |data|
+            i=i+1
+        end
+        i
+    end
+
 end
 
+#it's for test our program by Habib Aroua
 user=User.new(nil,"Habib","azerty")
 puts user
-#user.insert
-#user.update(1,'Nada','Nadouda')
-user.delete(2)
+arr=user.show
+for a in arr
+    puts a
+end
