@@ -24,7 +24,11 @@ class User
         con=nil
         con=c.getConnection()
         con.query("insert into `user` values (null,'#{@name}','#{@password}')")
-        puts con.affected_rows
+        if con.affected_rows == 1
+            return true
+        else
+            return false
+        end
     end
     
     def update(id,name,password)
