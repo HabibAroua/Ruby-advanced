@@ -71,7 +71,7 @@ class User
         end
         i
     end
-
+    
 end
 
 #it's for test our program by Habib Aroua

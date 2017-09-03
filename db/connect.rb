@@ -11,7 +11,7 @@ class Connection
        password="" #your password
        db="ruby" #the name of your database 
        con=Mysql.new(ipAdress,user,password,db)
-        puts 'Your connection has been succes'
+        #puts 'Your connection has been succes'
         return con
     end
 end

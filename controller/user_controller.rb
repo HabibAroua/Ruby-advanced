@@ -27,6 +27,9 @@ class UserController
     end
     
     def delete
+        #puts 'Enter a id'
+        #user=User.new
+        #user.delete(id)
         
     end
     
@@ -35,9 +38,16 @@ class UserController
     end
     
     def show
-        
+        user=User.new(nil,nil,nil)
+        arr=user.show
+        for a in arr
+            puts a
+        end
     end
+    
 end
 
 u=UserController.new
-u.add
+u.show
+
+#using by Habib Aroua
