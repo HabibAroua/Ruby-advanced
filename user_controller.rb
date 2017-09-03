@@ -46,3 +46,6 @@ class UserController
     end
     
 end
+
+u=UserController.new
+u.show
